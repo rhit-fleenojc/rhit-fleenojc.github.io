@@ -51,6 +51,10 @@ a:hover{
 
 body#about img {
     height: 15em;
+    display: inline;
+    float: right;
+    margin-left: var(--horizontal-space);
+    margin-bottom: var(--horizontal-space);
 }
 
 p {
@@ -95,6 +99,8 @@ body>nav {
 body>nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    line-height: 2.4;
 }
 
 body>nav ul li {
