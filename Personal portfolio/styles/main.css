@@ -55,6 +55,7 @@ body#about img {
     float: right;
     margin-left: var(--horizontal-space);
     margin-bottom: var(--horizontal-space);
+    border: 3px solid var(--body-color);
 }
 
 p {
@@ -133,6 +134,10 @@ body#portfolio ul#portfolioItems {
     flex: 1;
     list-style-type: none;
     padding: 0;
+}
+
+body#resume h3{
+    font-weight:lighter;
 }
 
 @media screen and (min-width: 25em) {
