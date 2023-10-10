@@ -35,6 +35,10 @@ h3 {
     color: var(--heading-color);
 }
 
+nav ul li, header{
+    color: gray;
+}
+
 a{
     color: var(--body-color);
     text-decoration-color: var(--contrast-color);
