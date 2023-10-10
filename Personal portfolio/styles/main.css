@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Delius+Swash+Caps&display=swap');
+
 :root{
     --vertical-space: 2rem;
     --horizontal-space: 4rem;
@@ -6,10 +8,12 @@
 body{
     font-size: 18px;
     line-height: 1.5;
+    font-family: 'Quicksand', sans-serif;
 }
 
 h1, h2, h3{
     line-height: 1.2;
+    font-family: 'Delius Swash Caps', cursive;
 }
 
 body#about img{
@@ -95,5 +99,5 @@ body#portfolio ul#portfolioItems{
 }
 
 body#portfolio ul#portfolioItems li img{
-max-width: 100%;
+    max-width: 100%;
 }
