@@ -75,6 +75,7 @@ body {
             "foot foot";
         grid-template-rows: auto auto 1fr auto;
     }
+
 }
 
 body>* {
@@ -88,6 +89,7 @@ body>header {
 
 body>nav {
     grid-area: nav;
+    font-size: 1.25rem;
 }
 
 body>nav ul {
