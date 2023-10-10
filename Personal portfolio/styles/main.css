@@ -1,89 +1,120 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Delius+Swash+Caps&display=swap');
 
-:root{
+:root {
     --vertical-space: 2rem;
     --horizontal-space: 4rem;
+    
+    --light-color: 250, 250, 250;
+    --body-color:#404040;
+    --heading-color:#41117A;
+    --contrast-color:#AD07AD;
 }
 
-body{
+body {
     font-size: 18px;
     line-height: 1.5;
     font-family: 'Quicksand', sans-serif;
+    background-image: linear-gradient(74deg, rgba(236, 236, 236,0.02) 0%, rgba(236, 236, 236,0.02) 13%,transparent 13%, transparent 64%,rgba(55, 55, 55,0.02) 64%, rgba(55, 55, 55,0.02) 71%,rgba(239, 239, 239,0.02) 71%, rgba(239, 239, 239,0.02) 100%),linear-gradient(170deg, rgba(8, 8, 8,0.02) 0%, rgba(8, 8, 8,0.02) 1%,transparent 1%, transparent 60%,rgba(9, 9, 9,0.02) 60%, rgba(9, 9, 9,0.02) 80%,rgba(198, 198, 198,0.02) 80%, rgba(198, 198, 198,0.02) 100%),linear-gradient(118deg, rgba(134, 134, 134,0.02) 0%, rgba(134, 134, 134,0.02) 30%,transparent 30%, transparent 43%,rgba(85, 85, 85,0.02) 43%, rgba(85, 85, 85,0.02) 47%,rgba(103, 103, 103,0.02) 47%, rgba(103, 103, 103,0.02) 100%),linear-gradient(249deg, rgba(178, 178, 178,0.02) 0%, rgba(178, 178, 178,0.02) 8%,transparent 8%, transparent 47%,rgba(161, 161, 161,0.02) 47%, rgba(161, 161, 161,0.02) 61%,rgb(65,17,122) 61%, rgb(65,17,122) 100%),linear-gradient(90deg, rgb(65,17,122),rgb(65,17,122));
+    /* background-image: repeating-linear-gradient(90deg, hsla(196, 0%, 79%, 0.06) 0px, hsla(196, 0%, 79%, 0.06) 1px, transparent 1px, transparent 96px), repeating-linear-gradient(0deg, hsla(196, 0%, 79%, 0.06) 0px, hsla(196, 0%, 79%, 0.06) 1px, transparent 1px, transparent 96px), repeating-linear-gradient(0deg, hsla(196, 0%, 79%, 0.09) 0px, hsla(196, 0%, 79%, 0.09) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(90deg, hsla(196, 0%, 79%, 0.09) 0px, hsla(196, 0%, 79%, 0.09) 1px, transparent 1px, transparent 12px), linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255)); */
+    color: var(--body-color);
 }
 
-h1, h2, h3{
+main{
+    background-color: rgba(var(--light-color), 0.5);
+}
+
+header h1, nav, nav a{
+    color: var(--light-color);
+}
+
+h1,
+h2,
+h3 {
     line-height: 1.2;
     font-family: 'Delius Swash Caps', cursive;
+    color: var(--heading-color);
 }
 
-body#about img{
+a{
+    color: var(--body-color);
+    text-decoration-color: var(--contrast-color);
+}
+
+a:hover{
+    color: var(--contrast-color);
+    text-decoration-color: var(--body-color);
+}
+
+body#about img {
     height: 15em;
 }
 
-p{
+p {
     max-width: 50em;
 }
 
-body{
+body {
     display: grid;
     grid-template-areas: "head head"
-                        "nav nav"
-                        "main main"
-                        "foot foot";
+        "nav nav"
+        "main main"
+        "foot foot";
     grid-template-columns: 1fr 4fr;
     grid-template-rows: auto auto 1fr auto;
 }
 
-@media screen and (min-width: 23.4em){
-    body{
+@media screen and (min-width: 23.4em) {
+    body {
         grid-template-areas: "head head"
-                        "nav main"
-                        "foot foot";
+            "nav main"
+            "foot foot";
         grid-template-rows: auto 1fr auto;
     }
 }
 
-body > *{
+body>* {
     padding-left: var(--horizontal-space);
     padding-right: var(--horizontal-space);
 }
 
-body > header{
+body>header {
     grid-area: head;
 }
 
-body > nav{
+body>nav {
     grid-area: nav;
 }
 
-body > nav ul{
+body>nav ul {
     list-style-type: none;
     padding: 0;
 }
 
-body > nav ul li{
+body>nav ul li {
     display: inline;
     padding-right: 1rem;
 }
 
-body > main{
+body>main {
     grid-area: main;
 }
 
-body > footer{
+body>footer {
     grid-area: foot;
 }
 
-header, footer{
+header,
+footer {
     padding-top: var(--vertical-space);
     padding-bottom: var(--vertical-space);
 }
 
-header h1, footer h1{
+header h1,
+footer h1 {
     margin: 0;
 }
 
-body#portfolio ul#portfolioItems{
+body#portfolio ul#portfolioItems {
     display: flex;
     flex-wrap: wrap;
     flex: 1;
@@ -91,13 +122,13 @@ body#portfolio ul#portfolioItems{
     padding: 0;
 }
 
-@media screen and (min-width: 25em){
-    body#portfolio ul#portfolioItems li{
+@media screen and (min-width: 25em) {
+    body#portfolio ul#portfolioItems li {
         flex-basis: 48%;
         padding-right: 2%;
     }
 }
 
-body#portfolio ul#portfolioItems li img{
+body#portfolio ul#portfolioItems li img {
     max-width: 100%;
 }
