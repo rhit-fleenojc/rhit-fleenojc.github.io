@@ -138,6 +138,7 @@ body#portfolio ul#portfolioItems {
 
 body#resume h3{
     font-weight:lighter;
+    color: #420cad;
 }
 
 @media screen and (min-width: 25em) {
